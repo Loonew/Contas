@@ -1,0 +1,19 @@
+<h3>Login</h3>
+
+<div class="form">
+    <form [formGroup]="formLogin" (ngSubmit)="login()">
+        <mat-form-field class="example-form-field" appearance="fill">
+            <mat-label>Email</mat-label>
+            <input formControlName="email" matInput type="email">
+        </mat-form-field>
+
+        <mat-form-field class="example-form-field" appearance="fill">
+            <mat-label>Senha</mat-label>
+            <input formControlName="senha" matInput type="password">
+        </mat-form-field>
+
+        <br>
+        <button mat-flat-button color="primary" type="submit" [disabled]="formLogin.invalid">Login</button>
+    </form>
+
+</div>
